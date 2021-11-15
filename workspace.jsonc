@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "teambit.context"
+    "defaultScope": "learn-bit-react.context"
   },
   /**
    * main configuration for component dependency resolution.
