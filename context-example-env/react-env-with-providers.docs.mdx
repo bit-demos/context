@@ -1,0 +1,62 @@
+---
+description: A standard React component development environment with configurable providers
+labels: ['react', 'typescript', 'env', 'extension', 'example', 'providers', 'context']
+---
+
+import { componentId } from './react-env-with-providers.aspect';
+
+## Overview
+
+Example of a customised React environment, with Preview providers configured to wrap all compositions of components built with this environment.
+
+### Composition Providers
+
+Inside the `.preview.runtime.ts` file in this component, you will see a `Providers` section. Components added here will be wrapped around all compositions that components using this 
+environment expose, as a way to mimic the behaviour of consuming apps.  
+
+For instance, your components may contain themable css, theming for which comes from the consuming app or 
+component. You don't want to add that theme inside your component, but you do want to be able to create component examples and contexts (compositions) which will illustrate how that 
+component will look when it is consumed by an app with a theme. 
+
+One option is to simply add your theme component to all compositions, which is fine for a while but if you want to do that for all of your components this quickly becomes teidous.
+Instead, you can add the theme to the Preview providers, and then it will be wrapped round all your components, as if the environment was the consuming app.
+
+In this repo we've implemented an even more concrete example of provider that consuming apps will need to, well, Provide for components to function properly. 
+
+### Context Providers
+
+In react, [Context](https://reactjs.org/docs/context.html) can be a powerful way of wirelessly connecting up parts of the app, state-management without the wires if you will.
+
+The Provider, managing the data, and Consumer are two different components, so how do we connect them up? And how can we create examples of a Consumer without the Provider component
+to inject the context.
+
+The `movies-api-context` component here illustrates an example of building an api context which contains the logic for both Provider and Consumer (useMovieContext) functions. The Consumer
+component will import `useMovieContext` to read the context, and the consuming app - in this case the Compositions feature in bit - will import the Provider and wrap the app with it.  
+
+### Context singleton
+
+Another thing to note when using context with bit, and specifically compositions, is that the Context connection requires both Provider and Consumer to be talking about the same 
+instance of the Context component. Otherwise they won't actually be talking to each other. 
+
+In a regular consuming app there will just be a single version of the `movie-context-api` component, which will conduct the context from Provider to Consumer. However, when talking about 
+two orthogonal components in the bit cloud being brought together by a composition, there is no containing application per se. In this case, both the environment (for Provider) and the 
+individual consumer components import the `movies-api-context` component, separately, so how do they know how to talk to each other? 
+
+The solution for this is for is a setting, again in the bit environment, which tells all components to take the context component from an agree-upon location.
+
+This setting is called `resolveFromEnv` - see the `react.overrideDependencies` line in the `main.runtime.ts` file here for an example usage.
+
+### Usage instructions
+
+Create a **variant** in project's `workspace.jsonc` file.  
+Set this extension as the variant's environment, for instance for the variant "any components in the 'ui' namespace":
+
+```json
+{
+   "teambit.workspace/variants": {
+     "{ui/**}": {
+       "`learn-bit-react.movies/extensions/react-env-with-provider`": {}
+     }
+   }
+}
+```
