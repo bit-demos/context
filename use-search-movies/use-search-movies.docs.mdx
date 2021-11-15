@@ -1,0 +1,33 @@
+---
+description: A hook for searching movies from www.omdbapi.com's API. The base URL is configurable via the component's environment
+labels: ['react', 'typescript', 'movies', 'search', 'hooks']
+---
+
+The useSearchMovies hook demonstrates a ***react hook as a bit component***, as well as a concrete example of a consumer for the `movie-api-context` context.  
+
+It makes use of an api hook factory component, to enable quick production of this
+ api hook, in which all that's required is   
+ a) to set up any dynamic parameters for the api call url
+ b) provide a data processing function for the data that returns from the api call.
+
+This specific api hook makes use of a provider, which supplies base URL and any fixed url parameters, and manages the actual api call to the www.omdbapi.com's movies database
+including mutating the returning data so that it is returned in the form of an [internal Movies data model](@learn-bit-react/movies.models.movie).
+
+The hook returns four items for managaing the API calls:
+1. getMovies - the function for actually searching movies
+1. movies - the result of the movie API call
+1. isLoading - true while the getMovies function is waiting to populate the movies variable
+1. error - holds any errors returned by the API call
+
+So usage of the hook is like so:
+
+```js
+const [getMovies, movies, isLoading, error] = useSearchMovies();
+
+// Some function to call getMovies, show isLoading until it's been reset to false, and then fetch movies data
+```
+
+Note: for the component compositions, the Provider (including baseUrl and fixed parameters) must be set up in the preview file of the environment used to build this component.  
+Please see the `extensions/context-example-env` components in this project for an example of this.
+
+
