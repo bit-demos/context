@@ -9,23 +9,35 @@
  */
 
 {
+    "api-context-base": {
+        "scope": "learn-bit-react.context",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "components/api-context-base"
+    },
     "context/movies-api-context": {
-        "scope": "",
-        "version": "",
+        "scope": "learn-bit-react.context",
+        "version": "0.0.1",
         "mainFile": "index.tsx",
-        "rootDir": "movies-api-context"
+        "rootDir": "components/movies-api-context"
     },
     "extensions/context-example-env": {
-        "scope": "",
-        "version": "",
+        "scope": "learn-bit-react.context",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "context-example-env"
+        "rootDir": "plugins/context-example-env"
     },
     "hooks/use-search-movies": {
-        "scope": "",
-        "version": "",
+        "scope": "learn-bit-react.context",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "use-search-movies"
+        "rootDir": "components/hooks/use-search-movies"
+    },
+    "hooks/utils/api-hook-factory": {
+        "scope": "learn-bit-react.context",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "components/hooks/utils/api-hook-factory"
     },
     "$schema-version": "14.9.0"
 }
