@@ -39,20 +39,21 @@
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
+        "@learn-bit-react/base-ui.ui.link": "1.0.16",
         "@learn-bit-react/movies.base-ui.search-box-with-button": "0.0.4",
-        "@learn-bit-react/movies.context.api-context-provider": "0.0.2",
         "@learn-bit-react/movies.models.movie": "0.0.2",
-        "@learn-bit-react/movies.movies.context.movies-api-context": "0.0.5",
-        "@learn-bit-react/movies.movies.context.movies-favourites-context": "0.0.6",
         "@learn-bit-react/movies.movies.ui.movie-card": "0.0.10",
         "@learn-bit-react/movies.theme.theme-context": "0.0.4",
-        "@learn-bit-react/movies.utils.hooks.api-hook-factory": "0.0.8",
         "@teambit/design.ui.buttons.button": "1.9.56",
         "@teambit/design.ui.input.text": "0.1.5",
-        "axios": "0.24.0",
-        "react": "17.0.2"
+        "axios": "0.21.1",
+        "react-request-hook": "2.1.1",
+        "react-router": "6.0.2"
       },
-      "peerDependencies": {}
+      "peerDependencies": {
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+      }
     },
     "packageManagerArgs": [],
     "devFilePatterns": [
@@ -73,8 +74,11 @@
     /**
      * "*" is a special rule which applied on all components in the workspace.
      **/
-    "use-search-movies": {
+    "components/hooks/use-search-movies": {
       "teambit.context/extensions/context-example-env": {}
+    },
+    "plugins": {
+      "teambit.harmony/aspect": {}
     }
   }
 }
