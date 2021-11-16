@@ -50,7 +50,7 @@ For instance, in the `movies-api-context` component here, we have added a compos
 
 Exported components can be seen [here](https://bit.dev/learn-bit-react/context)
 
-<img width="1788" alt="CleanShot 2021-08-10 at 19 48 13@2x" src="https://user-images.githubusercontent.com/67269267/137623025-fe671ee8-a386-4ada-9704-50b4ed6de0fa.png">
+<img width="1703" alt="Screen Shot 2021-11-16 at 15 44 51" src="https://user-images.githubusercontent.com/67269267/141996638-6d3c75be-d465-403c-aabf-fb86f8015021.png">
 
 If you would like to import(clone) the project to take it for a test run make sure you have [bit installed](https://harmony-docs.bit.dev/getting-started/installing-bit).
 
