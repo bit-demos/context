@@ -1,7 +1,7 @@
 import React, {ReactNode} from 'react';
 import axios from 'axios';
 import { MovieResponse } from '@learn-bit-react/movies.models.movie';
-import { ApiContextProvider, useApiContext, ContextResource } from '@learn-bit-react/movies.context.api-context-provider';
+import { ApiContextBaseProvider, useApiContext, ContextResource } from '@learn-bit-react/context.api-context-base';
 
 const defaultBaseUrl = 'https://www.omdbapi.com';
 const defaultApiKey = '35fdde3e';
@@ -19,7 +19,7 @@ export function MovieApiContextProvider({ baseUrl, apiKey, children}: MovieApiCo
         apikey: apiKey || defaultApiKey
         }
     });
-    return <ApiContextProvider apiInstance={axiosInstance}>{children}</ApiContextProvider>
+    return <ApiContextBaseProvider apiInstance={axiosInstance}>{children}</ApiContextBaseProvider>
 }
 
 export const UseMovieContext = useApiContext;
