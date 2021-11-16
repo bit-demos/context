@@ -11,31 +11,31 @@
 {
     "api-context-base": {
         "scope": "learn-bit-react.context",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "components/api-context-base"
     },
     "context/movies-api-context": {
         "scope": "learn-bit-react.context",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.tsx",
         "rootDir": "components/movies-api-context"
     },
     "extensions/context-example-env": {
         "scope": "learn-bit-react.context",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "plugins/context-example-env"
     },
     "hooks/use-search-movies": {
         "scope": "learn-bit-react.context",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "components/hooks/use-search-movies"
     },
     "hooks/utils/api-hook-factory": {
         "scope": "learn-bit-react.context",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "components/hooks/utils/api-hook-factory"
     },
