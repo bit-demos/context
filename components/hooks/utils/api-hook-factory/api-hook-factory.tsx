@@ -3,7 +3,7 @@ import { useApiContext, ContextConfigFunction } from '@learn-bit-react/context.a
 
 /**
  * This is a factory for producing apiWithContext hooks. These hooks assume there is a ApiContextProvider provider 
- * from the api-context-provider component being injected into the consuming app
+ * from the api-context-base component being injected into the consuming app
  * 
  * @param apiCallConfig
  * should take the format of a function, of return type ContextResource<ApiDataObjectType>, which accepts parameters which are to be configured in the url, 

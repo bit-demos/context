@@ -1,6 +1,6 @@
 import { Aspect } from '@teambit/harmony';
 
-export const componentId = 'teambit.context/extensions.react-env-with-provider';
+export const componentId = 'learn-bit-react.context/extensions.react-env-with-provider';
 
 export type WithPreviewReactConfig = {
   baseMoviesUrl: string;
