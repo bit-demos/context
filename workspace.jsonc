@@ -75,7 +75,7 @@
      * "*" is a special rule which applied on all components in the workspace.
      **/
     "components/hooks/use-search-movies": {
-      "teambit.context/extensions/context-example-env": {}
+      "learn-bit-react.context/extensions/context-example-env": {}
     },
     "plugins": {
       "teambit.harmony/aspect": {}
