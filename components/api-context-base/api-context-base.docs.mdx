@@ -1,10 +1,10 @@
 ---
-description: A context provider to wrap an app that wishes to use the react-request-hook api provider
+description: A context component exposing both provider and consumer logic for an api base context an app that wishes to use the react-request-hook api provider
 labels: ['api', 'context', 'provider', 'axios', 'rest', 'RESTful']
 ---
 
 Exports:  
-1. `ApiContextProvider` - the provider end of the api context. Takes in an axios instance with your baseUrl (and any other parameters required for all api calls using the context)
+1. `ApiContextBase` - the provider end of the api context. Takes in an axios instance with your baseUrl (and any other parameters required for all api calls using the context)
 and provides this base API to any consumers of `useApiContext`.  
 1. `useApiContext` - consumption of the provided context.   
 See usage examples below
@@ -27,7 +27,7 @@ you simply call the exported useResource, add any additional parameters for the 
 ``` js title="provider for direct usage"
 app.js
     import axios from 'axios';
-    import { ApiContextProvider } from '@learn-bit-react/movies.context.api-context-provider';
+    import { ApiContextProvider } from '@learn-bit-react/context.api-context-base';
 
     const axiosInstance = axios.create({
       baseURL: "someBaseUrl",

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { RequestProvider, useResource, Resource, UseResourceResult, Request } from 'react-request-hook';
 import { AxiosInstance } from 'axios';
 
-export type ApiContextProviderProps = {
+export type ApiContextBaseProviderProps = {
     children?: ReactNode,
     apiInstance: AxiosInstance
 }
@@ -12,6 +12,6 @@ export type ContextConfigFunction<TPropsType, TReturnType> = (props?:TPropsType)
 export type useApiContextType<TRequest extends Request> = UseResourceResult<TRequest>;
 export interface ContextResource<TPayload> extends Resource<TPayload>{};
 
-export const ApiContextProvider = ({ children, apiInstance }: ApiContextProviderProps) => {
+export const ApiContextBaseProvider = ({ children, apiInstance }: ApiContextBaseProviderProps) => {
     return <RequestProvider value={apiInstance}>{children}</RequestProvider>
 }
