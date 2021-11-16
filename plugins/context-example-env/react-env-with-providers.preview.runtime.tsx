@@ -1,10 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 import { PreviewRuntime } from '@teambit/preview';
 import { ReactAspect, ReactPreview } from '@teambit/react';
 import { Aspect } from '@teambit/harmony';
 import { ThemeContext } from '@learn-bit-react/movies.theme.theme-context';
-import { MovieApiContextProvider } from '@teambit/context.context.movies-api-context';
+import { MovieApiContextProvider } from '@learn-bit-react/context.context.movies-api-context';
 import { WithPreviewReactConfig, WithPreviewReactAspect } from './react-env-with-providers.aspect';
 
 export class WithPreviewReactPreview {

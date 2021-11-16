@@ -29,13 +29,13 @@ export class WithPreviewReactMain {
     const WithProvidersEnv = envs.compose(react.reactEnv, [
         react.overrideDependencies({
           dependencies: {
-            '@teambit/context.context.movies-api-context': '-'
+            '@learn-bit-react/context.context.movies-api-context': '-'
           },
           devDependencies: {
-            '@teambit/context.context.movies-api-context': '-'
+            '@learn-bit-react/context.context.movies-api-context': '-'
           },
           peerDependencies: {
-            '@teambit/context.context.movies-api-context': {
+            '@learn-bit-react/context.context.movies-api-context': {
               version: 'latest',
               resolveFromEnv: true,
             }

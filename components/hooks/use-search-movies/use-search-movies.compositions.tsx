@@ -20,6 +20,7 @@ export const SearchMoviesWithInput = () => {
                     )
                 }
             )}
+            {error && error}
         </div>
     )
 }
